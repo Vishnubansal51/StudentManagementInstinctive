@@ -7,11 +7,13 @@ const app = express();
 
 app.use(
   cors({
-    origin: "https://student-management-instinctive.vercel.app/", 
+    origin: "https://student-management-instinctive.vercel.app", 
     methods: ["GET", "POST", "PUT", "DELETE"], 
     credentials: true, 
   })
 );
+
+// https://studentmanagementinstinctive.onrender.com/
 
 app.use(express.json()); 
 
