@@ -1,0 +1,24 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Student {
+  id          Int      @id @default(autoincrement())
+  name        String   @db.VarChar(100) // Limit name length to 100 characters
+  cohort      String   @default("AY 2024-25") // Default cohort value
+  dateJoined  DateTime @default(now())
+  lastLogin   DateTime @updatedAt // Auto-update lastLogin on record update
+  status      Boolean  @default(true) // Default status to 'true' (active)
+  courses     String[] @default(["General"]) // Array of strings
+}
