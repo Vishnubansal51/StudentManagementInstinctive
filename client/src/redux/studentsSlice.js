@@ -61,3 +61,6 @@ const studentsSlice = createSlice({
 });
 
 export default studentsSlice.reducer;
+
+
+https://student-management-instinctive.vercel.app/
