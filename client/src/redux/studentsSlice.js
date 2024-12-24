@@ -5,7 +5,7 @@ import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
 
 // const API_BASE_URL = "http://localhost:5000"; // Backend base URL
-const API_BASE_URL = "https://studentmanagementinstinctive.onrender.com/"; // Backend base URL
+const API_BASE_URL = "https://studentmanagementinstinctive.onrender.com"; // Backend base URL
 
 
 // Fetch all students
@@ -63,4 +63,4 @@ const studentsSlice = createSlice({
 export default studentsSlice.reducer;
 
 
-https://student-management-instinctive.vercel.app/
+// https://student-management-instinctive.vercel.app
